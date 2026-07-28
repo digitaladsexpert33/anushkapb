@@ -20,7 +20,6 @@ body{
   position:relative;
 }
 
-/* ── Background ── */
 .bg-layer{
   position:fixed;inset:0;z-index:0;
   background:
@@ -45,7 +44,6 @@ canvas#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
   66%{transform:translate(-18px,12px) scale(.94)}
 }
 
-/* ── Card ── */
 .wrapper{
   position:relative;z-index:10;
   width:92%;max-width:460px;
@@ -71,7 +69,6 @@ canvas#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
   border-color:rgba(212,175,55,.25);
 }
 
-/* rotating border glow */
 .card::before{
   content:'';position:absolute;inset:-1.5px;border-radius:29px;z-index:-1;
   background:conic-gradient(from var(--angle,0deg),transparent 55%,rgba(212,175,55,.35) 75%,transparent 95%);
@@ -83,13 +80,11 @@ canvas#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
 @property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
 @keyframes rotateBorder{to{--angle:360deg}}
 
-/* top highlight line */
 .card::after{
   content:'';position:absolute;top:0;left:15%;right:15%;height:1px;
   background:linear-gradient(90deg,transparent,rgba(212,175,55,.45),transparent);
 }
 
-/* ── Logo ── */
 .logo-wrap{
   position:relative;width:88px;height:88px;margin:0 auto 28px;
 }
@@ -118,7 +113,6 @@ canvas#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
   50%{text-shadow:0 0 30px rgba(212,175,55,.55),0 0 60px rgba(212,175,55,.15)}
 }
 
-/* ── Badge ── */
 .badge{
   display:inline-flex;align-items:center;gap:7px;
   background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.12);
@@ -135,7 +129,6 @@ canvas#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
 }
 @keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.8)}}
 
-/* ── Heading ── */
 h1{
   font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1.15;
   background:linear-gradient(135deg,#f5d76e 0%,#d4af37 40%,#b8941f 100%);
@@ -145,7 +138,6 @@ h1{
   animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .55s forwards;
 }
 
-/* ── Description ── */
 .desc{
   font-size:14.5px;font-weight:400;line-height:1.75;color:rgba(255,255,255,.45);
   margin-bottom:0;
@@ -153,7 +145,6 @@ h1{
   animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .65s forwards;
 }
 
-/* ── Features ── */
 .features{
   display:flex;flex-direction:column;gap:10px;
   margin:28px 0 30px;
@@ -178,9 +169,7 @@ h1{
   display:flex;align-items:center;justify-content:center;
   color:#d4af37;font-size:16px;
 }
-.feature-text{
-  text-align:left;
-}
+.feature-text{text-align:left}
 .feature-text span{
   display:block;font-size:13.5px;font-weight:500;color:rgba(255,255,255,.75);
 }
@@ -188,7 +177,6 @@ h1{
   font-size:11.5px;color:rgba(255,255,255,.3);font-weight:400;
 }
 
-/* ── Button ── */
 .btn-wrap{
   transform:translateY(24px);opacity:0;
   animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .85s forwards;
@@ -224,7 +212,6 @@ h1{
 
 .btn svg{width:18px;height:18px;flex-shrink:0}
 
-/* ── Trust ── */
 .trust{
   margin-top:22px;
   font-size:11.5px;color:rgba(255,255,255,.2);
@@ -234,7 +221,6 @@ h1{
 }
 .trust svg{width:13px;height:13px;color:rgba(212,175,55,.3)}
 
-/* ── Toast ── */
 .toast{
   position:fixed;bottom:30px;left:50%;
   transform:translateX(-50%) translateY(80px);
@@ -249,11 +235,9 @@ h1{
 }
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
-/* ── Keyframes ── */
 @keyframes fadeUp{to{transform:translateY(0);opacity:1}}
 @keyframes cardIn{to{transform:translateY(0) scale(1);opacity:1}}
 
-/* ── Responsive ── */
 @media(max-width:480px){
   .card{padding:40px 22px 34px;border-radius:22px}
   h1{font-size:25px}
@@ -295,7 +279,6 @@ src="https://www.facebook.com/tr?id=2092013978365524&ev=PageView&noscript=1"
 <div class="wrapper">
   <div class="card">
 
-    <!-- Logo -->
     <div class="logo-wrap">
       <div class="logo-ring"></div>
       <div class="logo-ring"></div>
@@ -303,21 +286,17 @@ src="https://www.facebook.com/tr?id=2092013978365524&ev=PageView&noscript=1"
       <div class="logo-icon">★</div>
     </div>
 
-    <!-- Badge -->
     <div class="badge">
       <span class="dot"></span>
       Invite Only
     </div>
 
-    <!-- Heading -->
     <h1>Step Inside the<br>Inner Circle</h1>
 
-    <!-- Description -->
     <p class="desc">
       This isn't just another group — it's a handpicked circle of sharp minds getting early access to what others miss.
     </p>
 
-    <!-- Features -->
     <div class="features">
       <div class="feature">
         <div class="feature-icon">⚡</div>
@@ -342,7 +321,6 @@ src="https://www.facebook.com/tr?id=2092013978365524&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="btn-wrap">
       <a href="https://telegram.me/+MFf7eLYqoBc4ZTk1" class="btn" target="_blank" id="ctaBtn">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
@@ -350,7 +328,6 @@ src="https://www.facebook.com/tr?id=2092013978365524&ev=PageView&noscript=1"
       </a>
     </div>
 
-    <!-- Trust -->
     <div class="trust">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       Limited spots · Verified members only
@@ -359,7 +336,6 @@ src="https://www.facebook.com/tr?id=2092013978365524&ev=PageView&noscript=1"
   </div>
 </div>
 
-<!-- Toast -->
 <div class="toast" id="toast">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
   Redirecting to Telegram...
@@ -421,8 +397,17 @@ function animate(){
 }
 animate();
 
-// ── Toast on click ──
+// ── CTA: Subscribe event + Toast ──
 document.getElementById('ctaBtn').addEventListener('click',function(){
+  // Meta Pixel Subscribe event
+  if(typeof fbq==='function'){
+    fbq('track','Subscribe',{
+      content_name:'VIP Inner Circle',
+      content_category:'Telegram Group'
+    });
+  }
+
+  // Show toast
   const t=document.getElementById('toast');
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2500);
